@@ -1,3 +1,12 @@
+@keyframes rotate-in {
+  from {
+    transform: scale(0.1) rotate(0);
+  }
+  to {
+    transform: scale(1) rotate(720deg);
+  }
+}
+
 h1, h2, p {
   margin: 0;
 }
@@ -5,19 +14,23 @@ h1, h2, p {
 .newsletter{
   font-family: 'Lato', sans-serif;
   width: 750px;
-  padding: 1rem;
+  padding: 6px 1rem;
   background-color: #d8d6d8;
-  text-align: center;
+  animation: rotate-in 1.5s;
 }
 
 /* Name Section */
 
 .name {
   /* font-family: 'Great Vibes', cursive; */
+  text-align: center;
+  padding: 12px 0;
 }
 
 .name__text {
   font-size: 60px;
+  word-spacing: 16px;
+  letter-spacing: 11px;
 }
 
 /* Info Section */
@@ -41,7 +54,7 @@ h1, h2, p {
 /* Title Section */
 
 .title {
-
+ text-align: center;
 }
 
 .title__text {
@@ -77,7 +90,8 @@ h1, h2, p {
 
   .content__text{
     display: flex;
-    /* text-align: justify; */
+    gap: 28px;
+    text-align: justify;
   }
 
 .content__right-side {
@@ -87,8 +101,10 @@ h1, h2, p {
   .content__img{
     width: 375px;
     height: 275px;
+    transform: rotate(-1deg);
+    clip-path: polygon(1% 1%, 99% 4%, 97% 99%, 0% 97%);
   }
 
   .content__text-img{
-    
+    text-align: justify;
   }
